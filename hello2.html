@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  </head>
+<title>IPFS文件上传接口文档</title>
+
+<xmp theme="united" style="display:none;">
+  ## IPFS文件上传接口文档##
+
+
+  ### 接口说明 
+
+  #### 文件上传
+  
+  - **请求URL**
+  > [localhost:3000/upload](#)
+  
+  - **请求方式** 
+  >**POST**
+  
+  - **请求头**
+  >**multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW**
+  
+  - **请求参数**
+   <table>
+    <tr>
+      <th width=10%, bgcolor=yellow >请求参数</th>
+      <th width=40%, bgcolor=yellow>参数类型</th>
+      <th width="50%", bgcolor=yellow>参数说明</th>
+    </tr>
+    <tr>
+      <td bgcolor=#eeeeee> name </td>
+      <td> String </td>
+      <td> 固定为：file  </td>
+    </tr>
+  </table>
+  
+  - **返回参数**
+  <table>
+    <tr>
+      <th width=10%, bgcolor=yellow >返回参数</th>
+      <th width=40%, bgcolor=yellow>参数类型</th>
+      <th width="50%", bgcolor=yellow>参数说明</th>
+    </tr>
+    <tr>
+      <td bgcolor=#eeeeee> status </td>
+      <td> Integer </td>
+      <td> 200  </td>
+    </tr>
+    <tr>
+      <td bgcolor=#eeeeee> data </td>
+      <td> String </td>
+      <td> 存储地址  </td>
+    </tr>
+    
+  </table>
+
+  - **返回示例**
+    
+  ```
+    {
+      "status": 200,
+      "data": "http://localhost:8080/ipfs/QmNoCkYszwjY9bukSQf8pckCFUabKiJ6j3GEHaGLzMrGKi"
+    }
+  ```
+  
+</xmp>
+
+<script src="http://strapdownjs.com/v/0.2/strapdown.js"></script>
+</html>

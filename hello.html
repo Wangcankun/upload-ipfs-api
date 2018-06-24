@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Marked in the browser</title>
+</head>
+<body>
+  <div id="content"></div>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    document.getElementById('content').innerHTML =
+      marked('## IPFS文件上传接口文档##\n\n#### 接口说明 **1、**文件上传\n\n- **请求URL**\n\n> [localhost:3000/upload](#)\n\n- **请求方式** \n\n>**POST**\n\n- **请求头**\n\n>**multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW**\n\n- **请求参数**\n\n 请求参数|参数类型|参数说明\n\n- | :-: | -:\n\nname|String|**固定为：file**\n\n- **返回参数**\n\n| 返回参数      |     参数类型 |   参数说明   |\n\n| :-------- | :--------| :------ |\n\n| status|   Integer|  200|\n\n| data|   String|  存储地址|\n\n- **返回示例**\n\n > \n\n`` \n\n{\n\n\"status\": 200,\n\n\"data\": \"http;//localhost:8080/ipfs/QmNoCkYszwjY9bukSQf8pckCFUabKiJ6j3GEHaGLzMrGKi\"\n\n} ``');
+  </script>
+</body>
+</html>
